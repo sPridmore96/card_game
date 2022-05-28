@@ -1,313 +1,315 @@
 const fullDeckObj = [
     {
         value : 14,
-        name : "ace",
-        suite : "hearts",
+        name : "A",
+        suite : "heart",
         rule : "highest"
     },
     {
         value : 14,
-        name : "ace",
-        suite : "diamonds",
+        name : "A",
+        suite : "diamond",
         rule : "highest"
     },
     {
         value : 14,
-        name : "ace",
-        suite : "clubs",
+        name : "A",
+        suite : "club",
         rule : "highest"
     },
     {
         value : 14,
-        name : "ace",
-        suite : "spades",
+        name : "A",
+        suite : "spade",
         rule : "highest"
     },
     {
         value : 13,
-        name : "king",
-        suite : "hearts",
+        name : "K",
+        suite : "heart",
         rule : "nothing"
     },
     {
         value : 13,
-        name : "king",
-        suite : "diamonds",
+        name : "K",
+        suite : "diamond",
         rule : "nothing"
     },
     {
         value : 13,
-        name : "king",
-        suite : "clubs",
+        name : "K",
+        suite : "club",
         rule : "nothing"
     },
     {
         value : 13,
-        name : "king",
-        suite : "spades",
+        name : "K",
+        suite : "spade",
         rule : "nothing"
     },
     {
         value : 12,
-        name : "queen",
-        suite : "hearts",
+        name : "Q",
+        suite : "heart",
         rule : "nothing"
     },
     {
         value : 12,
-        name : "queen",
-        suite : "diamonds",
+        name : "Q",
+        suite : "diamond",
         rule : "nothing"
     },
     {
         value : 12,
-        name : "queen",
-        suite : "clubs",
+        name : "Q",
+        suite : "club",
         rule : "nothing"
     },
     {
         value : 12,
-        name : "queen",
-        suite : "spades",
+        name : "Q",
+        suite : "spade",
         rule : "nothing"
     },
     {
         value : 11,
-        name : "jack",
-        suite : "hearts",
+        name : "J",
+        suite : "heart",
         rule : "nothing"
     },
     {
         value : 11,
-        name : "jack",
-        suite : "diamonds",
+        name : "J",
+        suite : "diamond",
         rule : "nothing"
     },
     {
         value : 11,
-        name : "jack",
-        suite : "clubs",
+        name : "J",
+        suite : "club",
         rule : "nothing"
     },
     {
         value : 11,
-        name : "jack",
-        suite : "spades",
+        name : "J",
+        suite : "spade",
         rule : "nothing"
     },    {
         value : 10,
-        name : "ten",
-        suite : "hearts",
+        name : "10",
+        suite : "heart",
         rule : "burn"
     },
     {
         value : 10,
-        name : "ten",
-        suite : "diamonds",
+        name : "10",
+        suite : "diamond",
         rule : "burn"
     },
     {
         value : 10,
-        name : "ten",
-        suite : "clubs",
+        name : "10",
+        suite : "club",
         rule : "burn"
     },
     {
         value : 10,
-        name : "ten",
-        suite : "spades",
+        name : "10",
+        suite : "spade",
         rule : "burn"
     },
     {
         value : 9,
-        name : "nine",
-        suite : "hearts",
+        name : "9",
+        suite : "heart",
         rule : "nothing"
     },
     {
         value : 9,
-        name : "nine",
-        suite : "diamonds",
+        name : "9",
+        suite : "diamond",
         rule : "nothing"
     },
     {
         value : 9,
-        name : "nine",
-        suite : "clubs",
+        name : "9",
+        suite : "club",
         rule : "nothing"
     },
     {
         value : 9,
-        name : "nine",
-        suite : "spades",
+        name : "9",
+        suite : "spade",
         rule : "nothing"
     },
     {
         value : 8,
-        name : "eight",
-        suite : "hearts",
+        name : "8",
+        suite : "heart",
         rule : "miss ago"
     },
     {
         value : 8,
-        name : "eight",
-        suite : "diamonds",
+        name : "8",
+        suite : "diamond",
         rule : "miss ago"
     },
     {
         value : 8,
-        name : "eight",
-        suite : "clubs",
+        name : "8",
+        suite : "club",
         rule : "miss ago"
     },
     {
         value : 8,
-        name : "eight",
-        suite : "spades",
+        name : "8",
+        suite : "spade",
         rule : "miss ago"
     },
     {
         value : 7,
-        name : "seven",
-        suite : "hearts",
+        name : "7",
+        suite : "heart",
         rule : "go lower than"
     },
     {
         value : 7,
-        name : "seven",
-        suite : "diamonds",
+        name : "7",
+        suite : "diamond",
         rule : "go lower than"
     },
     {
         value : 7,
-        name : "seven",
-        suite : "clubs",
+        name : "7",
+        suite : "club",
         rule : "go lower than"
     },
     {
         value : 7,
-        name : "seven",
-        suite : "spades",
+        name : "7",
+        suite : "spade",
         rule : "go lower than"
     },
     {
         value : 6,
-        name : "six",
-        suite : "hearts",
+        name : "6",
+        suite : "heart",
         rule : "nothing"
     },
     {
         value : 6,
-        name : "six",
-        suite : "diamonds",
+        name : "6",
+        suite : "diamond",
         rule : "nothing"
     },
     {
         value : 6,
-        name : "six",
-        suite : "clubs",
+        name : "6",
+        suite : "club",
         rule : "nothing"
     },
     {
         value : 6,
-        name : "six",
-        suite : "spades",
+        name : "6",
+        suite : "spade",
         rule : "nothing"
     },
     {
         value : 5,
-        name : "five",
-        suite : "hearts",
+        name : "5",
+        suite : "heart",
         rule : "nothing"
     },
     {
         value : 5,
-        name : "five",
-        suite : "diamonds",
+        name : "5",
+        suite : "diamond",
         rule : "nothing"
     },
     {
         value : 5,
-        name : "five",
-        suite : "clubs",
+        name : "5",
+        suite : "club",
         rule : "nothing"
     },
     {
         value : 5,
-        name : "five",
-        suite : "spades",
+        name : "5",
+        suite : "spade",
         rule : "nothing"
     },
     {
         value : 4,
-        name : "four",
-        suite : "hearts",
+        name : "4",
+        suite : "heart",
         rule : "lowest"
     },
     {
         value : 4,
-        name : "four",
-        suite : "diamonds",
+        name : "4",
+        suite : "diamond",
         rule : "lowest"
     },
     {
         value : 4,
-        name : "four",
-        suite : "clubs",
+        name : "4",
+        suite : "club",
         rule : "lowest"
     },
     {
         value : 4,
-        name : "four",
-        suite : "spades",
+        name : "4",
+        suite : "spade",
         rule : "lowest"
     },
     {
         value : 3,
-        name : "three",
-        suite : "hearts",
+        name : "3",
+        suite : "heart",
         rule : "invisible"
     },
     {
         value : 3,
-        name : "three",
-        suite : "diamonds",
+        name : "3",
+        suite : "diamond",
         rule : "invisible"
     },
     {
         value : 3,
-        name : "three",
-        suite : "clubs",
+        name : "3",
+        suite : "club",
         rule : "invisible"
     },
     {
         value : 3,
-        name : "three",
-        suite : "spades",
+        name : "3",
+        suite : "spade",
         rule : "invisible"
     },
     {
         value : 2,
-        name : "two",
-        suite : "hearts",
+        name : "2",
+        suite : "heart",
         rule : "reset"
     },
     {
         value : 2,
-        name : "two",
-        suite : "diamonds",
+        name : "2",
+        suite : "diamond",
         rule : "reset"
     },
     {
         value : 2,
-        name : "two",
-        suite : "clubs",
+        name : "2",
+        suite : "club",
         rule : "reset"
     },
     {
         value : 2,
-        name : "two",
-        suite : "spades",
+        name : "2",
+        suite : "spade",
         rule : "reset"
     },
 ]
+
+export default fullDeckObj

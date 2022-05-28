@@ -1,10 +1,4 @@
-@use "./styles/variables" as *;
-
-body {
-	padding: 0;
-	margin: 0;
-	background: $background;
-}
+@use "./variables.scss" as *;
 
 .cards {
 	text-align: center;
@@ -13,6 +7,7 @@ body {
 }
 
 .card {
+
 	position: relative;
 	display: inline-block;
 	width: $card-width;
@@ -61,6 +56,27 @@ body {
 			content: attr(value) ' ♠';
 		}
 	}
+	&--diamond {
+		color: $card-color-red;
+		
+		&:before,
+		&:after {
+			content: attr(value) ' ◆';
+		}
+	}
+	&--club {
+		color: $card-color-black;
+		
+		&:before,
+		&:after {
+			content: attr(value) ' \2663';
+		}
+	}
+	&--back {
+		background: rgb(255,253,254);
+	background: radial-gradient(circle, rgba(255,253,254,1) 0%, rgba(40,151,223,1) 100%);
+	}
+		
 }
 
 .card__inner {
@@ -101,19 +117,16 @@ body {
 	.card--heart &:before {
 		content: '♥';
 	}
-	
 	.card--spade &:before {
 		content: '♠';
 	}
-	
-	&--rotated,
-	&:last-of-type {
-		transform: rotate(180deg);
+	.card--diamond &:before {
+		content: "◆";
+	}
+	.card--club &:before {
+		content: "\2663";
 	}
 	
-	&:first-of-type {
-		transform: rotate(0);
-	}
 	
 	&--big {
 		flex-basis: 0.25 * $card-height;
