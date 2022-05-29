@@ -36,25 +36,25 @@
   color: #e44145;
 }
 .card--heart:before, .card--heart:after {
-  content: attr(value) " ♥";
+  content: attr(name) " ♥";
 }
 .card--spade {
   color: #252525;
 }
 .card--spade:before, .card--spade:after {
-  content: attr(value) " ♠";
+  content: attr(name) " ♠";
 }
 .card--diamond {
   color: #e44145;
 }
 .card--diamond:before, .card--diamond:after {
-  content: attr(value) " ◆";
+  content: attr(name) " ◆";
 }
 .card--club {
   color: #252525;
 }
 .card--club:before, .card--club:after {
-  content: attr(value) " ♣";
+  content: attr(name) " ♣";
 }
 .card--back {
   background: rgb(255, 253, 254);

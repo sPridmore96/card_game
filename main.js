@@ -4,8 +4,8 @@ import fullDeckObj from "./cards.js"
 
 //------------ global Vars
 let shuffledDeck = [];
-let comparisonArray = []
-
+let userCardValue = 0;
+let stackCardValue = 0;
 
 // ---------- DOM selectors
 const usersHandHTML = document.querySelector(".user__hand");
@@ -37,8 +37,6 @@ const startGame = () => {
 startGame()
 
 
-
-
 const compareCardValues = (valueOne, valueTwo) => {
     let highest = 0
     valueOne > valueTwo ? highest = valueOne : highest = valueTwo
@@ -48,27 +46,43 @@ const compareCardValues = (valueOne, valueTwo) => {
 const compareCardSnap = (userCard, stackCard) => {
     let decisionMessage = "";
     userCard === stackCard ? decisionMessage = "Snap!!!" : decisionMessage = "Unlucky they dont match..."
-    return decisionMessage;
+    console.log(decisionMessage); ;
 }
 
+const useSnapButton = (event) => {
+    let userCard = userCardValue
+    let stackCard = stackCardValue
+    compareCardSnap(userCard, stackCard)
 
+
+}
 // --------------- moving cards to be used
-const giveStackCard = (event) => {
-    event = event.target;
+const giveStackCard = () => {
+    // event = event.target.value;
     let removedCard = removeFromDeck(shuffledDeck)
-    collectCardValues(removedCard)
+    stackCardValue = collectCardValues(removedCard)
     let cardGiven = createCardInfo(removedCard)
-    return makeCard(cardGiven, tableStack);
+    return makeCard(cardGiven, tableStack), stackCardValue;
 }
 const giveUserCard = (event) => {
+    let userCard = ''
     event = event.target;
     let removedCard = removeFromDeck(shuffledDeck)
-    collectCardValues(removedCard)
+    console.log(removedCard);
+    userCardValue = collectCardValues(removedCard)
     let cardGiven = createCardInfo(removedCard)
-    return makeCard(cardGiven, usersHandHTML);
+    console.log(cardGiven);
+    userCard = makeCard(cardGiven, usersHandHTML);
+    giveStackCard()
+
+    return userCard, userCardValue
 }
+console.log(userCardValue);
+
 const removeFromDeck = (deck) => {
+    console.log(shuffledDeck);
     return deck.pop()
+
 }
 const collectCardValues = (card) => {
     let NumberValueForCard = card.value
@@ -76,7 +90,7 @@ const collectCardValues = (card) => {
 }
 const createCardInfo = (givenObj) => {
     let cardInfo =
-        ` <section class="card card--${givenObj.suite}" value="${givenObj.name}">
+        ` <section class="card card--${givenObj.suite}" name="${givenObj.name}" value = ${givenObj.value}>
     <div class="card__inner card__inner--centered">
         <div class="card__column">
             <div class="card__symbol"></div>
@@ -105,7 +119,7 @@ const copyCardInfo = (htmlElement, receivingElement) => {
     return receivingElement
 }
 const clearCardInfo = (card) => {
-    let cardInfoReset = ``
+    const cardInfoReset = ``
     card.innerHTML = cardInfoReset
 }
 
@@ -114,3 +128,4 @@ const clearCardInfo = (card) => {
 giveCard.addEventListener("click", giveUserCard)
 updateStack.addEventListener('click', giveStackCard)
 goToBurn.addEventListener('click', cardToBurnFromStack)
+snap.addEventListener('click', useSnapButton)
