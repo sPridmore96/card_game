@@ -14,7 +14,6 @@ const tableStack = document.querySelector(".table__stack")
 const tableBurn = document.querySelector('.table__burn')
 const giveCard = document.querySelector("#give-card");
 const snap = document.querySelector('#snap-button')
-const updateStack = document.querySelector('#update-stack')
 const goToBurn = document.querySelector('#burn-card')
 
 
